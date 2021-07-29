@@ -1,5 +1,5 @@
 # MorseCode
----
+
 This program translates English to morse and vice versa.
 
 ## Usage
