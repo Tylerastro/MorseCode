@@ -1,6 +1,9 @@
 # MorseCode
 
 This program translates English to morse and vice versa.
+Type in your terminal to install:
+
+`pip install Morse-Translator`
 
 ## Usage
 
