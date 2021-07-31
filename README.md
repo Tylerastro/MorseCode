@@ -3,9 +3,12 @@
 This program translates English to morse and vice versa.
 
 ## Usage
+
 In your terminal:
-1. Download `git clone https://github.com/Tylerastro/MorseCode.git`
-2. Open the python file `python MorseDecode`
+`morse`
+
+And voila, the terminal would open the morse code translator.
 
 ## Note
-The dictionary file is not complete yet.
+The dictionary is not complete yet. Special characters are not included.
+This is in the pre-Alpha stage.

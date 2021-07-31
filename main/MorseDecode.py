@@ -6,7 +6,6 @@ Created on Fri Jul 23 21:20:38 2021
 @author: tyler
 """
 
-
 #%%
 Mcode = {'.-' : 'A', '-...' : 'B','-.-.' :'C','-..' :'D',
        '.':'E','..-.':'F','--.':'G','....':'H','..':'I',
@@ -63,39 +62,36 @@ def codeMorse(normal_code):
 
 
 #%%
-def main(text):
-    try:
-        return codeMorse(text)
-    except:
-        return decodeMorse(text)
-
-
-
-
-#%%
 
 import sys
 
-print(
- '#     #                                 #####                       ','\n'
- '##   ##  ####  #####   ####  ######    #        ####  #####  ###### ','\n'
- '# # # # #    # #    # #      #         #       #    # #    # #      ','\n'
- '#  #  # #    # #    #  ####  #####     #       #    # #    # #####  ','\n'
- '#     # #    # #####       # #         #       #    # #    # #      ','\n'
- '#     # #    # #   #  #    # #         #       #    # #    # #      ','\n'
- '#     #  ####  #    #  ####  ######     #####   ####  #####  ###### ','\n')
+def main():
+    
+    print(
+     '#     #                                 #####                       ','\n'
+     '##   ##  ####  #####   ####  ######    #        ####  #####  ###### ','\n'
+     '# # # # #    # #    # #      #         #       #    # #    # #      ','\n'
+     '#  #  # #    # #    #  ####  #####     #       #    # #    # #####  ','\n'
+     '#     # #    # #####       # #         #       #    # #    # #      ','\n'
+     '#     # #    # #   #  #    # #         #       #    # #    # #      ','\n'
+     '#     #  ####  #    #  ####  ######     #####   ####  #####  ###### ','\n')
+    
+    print('Welcom to Morse Code')
+    print('Designed by Tylerastro')
+    print('Enter q to exit')
 
-print('Welcom to Morse Code')
-print('Designed by Tylerastro')
-print('Enter q to exit')
+    run = True
+    while run:
+        translate = str(input('Enter your word here and I translate for you: '))
+        if translate == 'q':
+            sys.exit()
+        else:
+            translate_upp = translate.upper()
+            try:
+                print( codeMorse(translate_upp))
+            except:
+                print( decodeMorse(translate_upp))
+                
+if __name__ == "__main__":
+    main()
 
-run = True
-while run:
-    translate = str(input('Enter your word here and I translate for you: '))
-    if translate == 'q':
-        sys.exit()
-    else:
-        translate_upp = translate.upper()
-        print( main(translate_upp))
-        
-        
