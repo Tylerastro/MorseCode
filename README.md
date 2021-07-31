@@ -11,6 +11,7 @@ In your terminal:
 `morse`
 
 And voila, the terminal would open the morse code translator.
+![screenshot](screenshot.png)
 
 ## Note
 The dictionary is not complete yet. Special characters are not included.
