@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+ #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Created on Fri Jul 23 21:20:38 2021
@@ -12,14 +12,14 @@ Mcode = {'.-' : 'A', '-...' : 'B','-.-.' :'C','-..' :'D',
        '.---':'J','-.-':'K','.-..':'L','--':'M','-.':'N',
        '---':'O','.--.':'P','--.-':'Q','.-.':'R','...':'S',
        '-':'T','..-':'U','...-':'V','.--':'W','-..-':'X',
-       '-.--':'Y','--..':'Z','.---':'1','..---':'2','...--':'3','....-':'4',
+       '-.--':'Y','--..':'Z','.----':'1','..---':'2','...--':'3','....-':'4',
        '.....':'5','-....':'6','--...':'7','---..':'8','----.':'9','-----':'0'}
 
 
 reversed_Mcode = {value : key for (key, value) in Mcode.items()}
 
 def decodeMorse(morse_code):
-    mistake = 'Not recognised: '
+    mistake = ''
     # ToDo: Accept dots, dashes and spaces, return human-readable message
     for space in morse_code:
         if space != ' ':
@@ -90,7 +90,8 @@ def main():
             try:
                 print( codeMorse(translate_upp))
             except:
-                print( decodeMorse(translate_upp))
+                print( decodeMorse(translate_upp)[0])
+                print('Syntax error: ', decodeMorse(translate_upp)[1])
                 
 if __name__ == "__main__":
     main()
